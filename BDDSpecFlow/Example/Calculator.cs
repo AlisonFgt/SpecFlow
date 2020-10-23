@@ -6,9 +6,14 @@
 
         public int SecondNumber { get; set; }
 
-        public int Add()
+        public int Soma()
         {
             return FirstNumber + SecondNumber;
+        }
+
+        public int Subtracao()
+        {
+            return FirstNumber - SecondNumber;
         }
     }
 }

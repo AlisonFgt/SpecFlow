@@ -19,24 +19,22 @@ namespace BDDSpecFlow.Features
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.4.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [TechTalk.SpecRun.FeatureAttribute("Operações da Calculadora", Description="\tA fim de evitar erros\r\n\tComo um péssimo matemático\r\n\tEu quero que me digam a som" +
-        "a de dois números", SourceFile="Features\\Calculator.feature", SourceLine=0)]
-    public partial class OperacoesDaCalculadoraFeature
+    [TechTalk.SpecRun.FeatureAttribute("Conversão de temperaturas em Fahrenheit", SourceFile="Features\\ConvTemperatus.feature", SourceLine=0)]
+    public partial class ConversaoDeTemperaturasEmFahrenheitFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
         private string[] _featureTags = ((string[])(null));
         
-#line 1 "Calculator.feature"
+#line 1 "ConvTemperatus.feature"
 #line hidden
         
         [TechTalk.SpecRun.FeatureInitialize()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Operações da Calculadora", "\tA fim de evitar erros\r\n\tComo um péssimo matemático\r\n\tEu quero que me digam a som" +
-                    "a de dois números", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Conversão de temperaturas em Fahrenheit", null, ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -72,16 +70,15 @@ namespace BDDSpecFlow.Features
             testRunner.CollectScenarioErrors();
         }
         
-        public virtual void SomarDoisNumeros(string valor1, string valor2, string operacao, string total, string[] exampleTags)
+        public virtual void SimulacaoTemperatura(string fahrenheit, string celsius, string resultadoEsperado, string[] exampleTags)
         {
             string[] tagsOfScenario = exampleTags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            argumentsOfScenario.Add("valor1", valor1);
-            argumentsOfScenario.Add("valor2", valor2);
-            argumentsOfScenario.Add("operacao", operacao);
-            argumentsOfScenario.Add("total", total);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Somar dois números", null, tagsOfScenario, argumentsOfScenario);
-#line 6
+            argumentsOfScenario.Add("fahrenheit", fahrenheit);
+            argumentsOfScenario.Add("celsius", celsius);
+            argumentsOfScenario.Add("resultadoEsperado", resultadoEsperado);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("SimulacaoTemperatura", null, tagsOfScenario, argumentsOfScenario);
+#line 3
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -101,51 +98,67 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
+#line 4
+ testRunner.Given(string.Format("que o valor da temperatura é de {0} graus Fahrenheit", fahrenheit), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 5
+ testRunner.When("eu solicitar a conversão desta teperatura", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 6
+ testRunner.Then(string.Format("o resultado da conversão para Celsius será de {0} graus", celsius), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
 #line 7
- testRunner.Given(string.Format("o primeiro numero é {0}", valor1), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 8
- testRunner.And(string.Format("o segundo numero é {0}", valor2), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 9
- testRunner.When(string.Format("a operacao sera {0}", operacao), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 10
- testRunner.Then(string.Format("o resultado deve ser {0}", total), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.And(string.Format("o resultado da conversão para Kelvin será de {0} graus", resultadoEsperado), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Somar dois números, 50", SourceLine=13)]
-        public virtual void SomarDoisNumeros_50()
+        [TechTalk.SpecRun.ScenarioAttribute("SimulacaoTemperatura, 32", SourceLine=10)]
+        public virtual void SimulacaoTemperatura_32()
         {
-#line 6
-this.SomarDoisNumeros("50", "70", "soma", "120", ((string[])(null)));
+#line 3
+this.SimulacaoTemperatura("32", "0", "273.15", ((string[])(null)));
 #line hidden
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Somar dois números, 20", SourceLine=13)]
-        public virtual void SomarDoisNumeros_20()
+        [TechTalk.SpecRun.ScenarioAttribute("SimulacaoTemperatura, 86", SourceLine=10)]
+        public virtual void SimulacaoTemperatura_86()
         {
-#line 6
-this.SomarDoisNumeros("20", "10", "subtracao", "10", ((string[])(null)));
+#line 3
+this.SimulacaoTemperatura("86", "30", "303.15", ((string[])(null)));
 #line hidden
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Somar dois números, 80", SourceLine=13)]
-        public virtual void SomarDoisNumeros_80()
+        [TechTalk.SpecRun.ScenarioAttribute("SimulacaoTemperatura, 47", SourceLine=10)]
+        public virtual void SimulacaoTemperatura_47()
         {
-#line 6
-this.SomarDoisNumeros("80", "20", "soma", "100", ((string[])(null)));
+#line 3
+this.SimulacaoTemperatura("47", "8.33", "281.48", ((string[])(null)));
 #line hidden
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Somar dois números, 10", SourceLine=13)]
-        public virtual void SomarDoisNumeros_10()
+        [TechTalk.SpecRun.ScenarioAttribute("SimulacaoTemperatura, 90.5", SourceLine=10)]
+        public virtual void SimulacaoTemperatura_90_5()
         {
-#line 6
-this.SomarDoisNumeros("10", "5", "subtracao", "5", ((string[])(null)));
+#line 3
+this.SimulacaoTemperatura("90.5", "32.5", "305.65", ((string[])(null)));
+#line hidden
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("SimulacaoTemperatura, 120.18", SourceLine=10)]
+        public virtual void SimulacaoTemperatura_120_18()
+        {
+#line 3
+this.SimulacaoTemperatura("120.18", "48.99", "322.14", ((string[])(null)));
+#line hidden
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("SimulacaoTemperatura, 212", SourceLine=10)]
+        public virtual void SimulacaoTemperatura_212()
+        {
+#line 3
+this.SimulacaoTemperatura("212", "100", "373.15", ((string[])(null)));
 #line hidden
         }
     }

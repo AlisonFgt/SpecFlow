@@ -30,10 +30,13 @@ namespace BDDSpecFlow.Steps
             calculator.SecondNumber = number;
         }
 
-        [When("os dois numeros sao adicionados")]
-        public void WhenTheTwoNumbersAreAdded()
+        [When("a operacao sera (.*)")]
+        public void WhenTheTwoNumbersAreAdded(string operacao)
         {
-            result = calculator.Add();
+            if (operacao.Equals("soma"))
+                result = calculator.Soma();
+            else if (operacao.Equals("subtracao"))
+                result = calculator.Subtracao();
         }
 
         [Then("o resultado deve ser (.*)")]
