@@ -3,15 +3,14 @@
     public class Calculator
     {
         public int FirstNumber { get; set; }
-
         public int SecondNumber { get; set; }
 
-        public int Soma()
+        public int Sum()
         {
             return FirstNumber + SecondNumber;
         }
 
-        public int Subtracao()
+        public int Subtraction()
         {
             return FirstNumber - SecondNumber;
         }

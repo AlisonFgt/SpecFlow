@@ -1,9 +1,9 @@
 ﻿Feature: Operações da Calculadora
 	A fim de evitar erros
 	Como um péssimo matemático
-	Eu quero que me digam a soma de dois números
+	Eu quero que me digam o resultado da operação de dois números
 
-Scenario: Somar dois números
+Scenario: Operar dois números
 	Given o primeiro numero é <valor1>
 	And o segundo numero é <valor2>
 	When a operacao sera <operacao>

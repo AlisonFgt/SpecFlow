@@ -34,9 +34,9 @@ namespace BDDSpecFlow.Steps
         public void WhenTheTwoNumbersAreAdded(string operacao)
         {
             if (operacao.Equals("soma"))
-                result = calculator.Soma();
+                result = calculator.Sum();
             else if (operacao.Equals("subtracao"))
-                result = calculator.Subtracao();
+                result = calculator.Subtraction();
         }
 
         [Then("o resultado deve ser (.*)")]

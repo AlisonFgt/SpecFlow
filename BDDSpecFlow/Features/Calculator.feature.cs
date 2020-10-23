@@ -19,8 +19,8 @@ namespace BDDSpecFlow.Features
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.4.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [TechTalk.SpecRun.FeatureAttribute("Operações da Calculadora", Description="\tA fim de evitar erros\r\n\tComo um péssimo matemático\r\n\tEu quero que me digam a som" +
-        "a de dois números", SourceFile="Features\\Calculator.feature", SourceLine=0)]
+    [TechTalk.SpecRun.FeatureAttribute("Operações da Calculadora", Description="\tA fim de evitar erros\r\n\tComo um péssimo matemático\r\n\tEu quero que me digam o res" +
+        "ultado da operação de dois números", SourceFile="Features\\Calculator.feature", SourceLine=0)]
     public partial class OperacoesDaCalculadoraFeature
     {
         
@@ -35,8 +35,8 @@ namespace BDDSpecFlow.Features
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Operações da Calculadora", "\tA fim de evitar erros\r\n\tComo um péssimo matemático\r\n\tEu quero que me digam a som" +
-                    "a de dois números", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Operações da Calculadora", "\tA fim de evitar erros\r\n\tComo um péssimo matemático\r\n\tEu quero que me digam o res" +
+                    "ultado da operação de dois números", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -72,7 +72,7 @@ namespace BDDSpecFlow.Features
             testRunner.CollectScenarioErrors();
         }
         
-        public virtual void SomarDoisNumeros(string valor1, string valor2, string operacao, string total, string[] exampleTags)
+        public virtual void OperarDoisNumeros(string valor1, string valor2, string operacao, string total, string[] exampleTags)
         {
             string[] tagsOfScenario = exampleTags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
@@ -80,7 +80,7 @@ namespace BDDSpecFlow.Features
             argumentsOfScenario.Add("valor2", valor2);
             argumentsOfScenario.Add("operacao", operacao);
             argumentsOfScenario.Add("total", total);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Somar dois números", null, tagsOfScenario, argumentsOfScenario);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Operar dois números", null, tagsOfScenario, argumentsOfScenario);
 #line 6
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -117,35 +117,35 @@ this.ScenarioInitialize(scenarioInfo);
             this.ScenarioCleanup();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Somar dois números, 50", SourceLine=13)]
-        public virtual void SomarDoisNumeros_50()
+        [TechTalk.SpecRun.ScenarioAttribute("Operar dois números, 50", SourceLine=13)]
+        public virtual void OperarDoisNumeros_50()
         {
 #line 6
-this.SomarDoisNumeros("50", "70", "soma", "120", ((string[])(null)));
+this.OperarDoisNumeros("50", "70", "soma", "120", ((string[])(null)));
 #line hidden
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Somar dois números, 20", SourceLine=13)]
-        public virtual void SomarDoisNumeros_20()
+        [TechTalk.SpecRun.ScenarioAttribute("Operar dois números, 20", SourceLine=13)]
+        public virtual void OperarDoisNumeros_20()
         {
 #line 6
-this.SomarDoisNumeros("20", "10", "subtracao", "10", ((string[])(null)));
+this.OperarDoisNumeros("20", "10", "subtracao", "10", ((string[])(null)));
 #line hidden
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Somar dois números, 80", SourceLine=13)]
-        public virtual void SomarDoisNumeros_80()
+        [TechTalk.SpecRun.ScenarioAttribute("Operar dois números, 80", SourceLine=13)]
+        public virtual void OperarDoisNumeros_80()
         {
 #line 6
-this.SomarDoisNumeros("80", "20", "soma", "100", ((string[])(null)));
+this.OperarDoisNumeros("80", "20", "soma", "100", ((string[])(null)));
 #line hidden
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Somar dois números, 10", SourceLine=13)]
-        public virtual void SomarDoisNumeros_10()
+        [TechTalk.SpecRun.ScenarioAttribute("Operar dois números, 10", SourceLine=13)]
+        public virtual void OperarDoisNumeros_10()
         {
 #line 6
-this.SomarDoisNumeros("10", "5", "subtracao", "5", ((string[])(null)));
+this.OperarDoisNumeros("10", "5", "subtracao", "5", ((string[])(null)));
 #line hidden
         }
     }

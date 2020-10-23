@@ -70,14 +70,14 @@ namespace BDDSpecFlow.Features
             testRunner.CollectScenarioErrors();
         }
         
-        public virtual void SimulacaoTemperatura(string fahrenheit, string celsius, string resultadoEsperado, string[] exampleTags)
+        public virtual void SimulacaoDeTemperatura(string fahrenheit, string celsius, string kelvin, string[] exampleTags)
         {
             string[] tagsOfScenario = exampleTags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("fahrenheit", fahrenheit);
             argumentsOfScenario.Add("celsius", celsius);
-            argumentsOfScenario.Add("resultadoEsperado", resultadoEsperado);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("SimulacaoTemperatura", null, tagsOfScenario, argumentsOfScenario);
+            argumentsOfScenario.Add("kelvin", kelvin);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Simulacao de Temperatura", null, tagsOfScenario, argumentsOfScenario);
 #line 3
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -102,63 +102,63 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Given(string.Format("que o valor da temperatura é de {0} graus Fahrenheit", fahrenheit), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 5
- testRunner.When("eu solicitar a conversão desta teperatura", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("eu solicitar a conversão desta temperatura", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 6
  testRunner.Then(string.Format("o resultado da conversão para Celsius será de {0} graus", celsius), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 7
- testRunner.And(string.Format("o resultado da conversão para Kelvin será de {0} graus", resultadoEsperado), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And(string.Format("o resultado da conversão para Kelvin será de {0} graus", kelvin), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("SimulacaoTemperatura, 32", SourceLine=10)]
-        public virtual void SimulacaoTemperatura_32()
+        [TechTalk.SpecRun.ScenarioAttribute("Simulacao de Temperatura, 32", SourceLine=10)]
+        public virtual void SimulacaoDeTemperatura_32()
         {
 #line 3
-this.SimulacaoTemperatura("32", "0", "273.15", ((string[])(null)));
+this.SimulacaoDeTemperatura("32", "0", "273.15", ((string[])(null)));
 #line hidden
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("SimulacaoTemperatura, 86", SourceLine=10)]
-        public virtual void SimulacaoTemperatura_86()
+        [TechTalk.SpecRun.ScenarioAttribute("Simulacao de Temperatura, 86", SourceLine=10)]
+        public virtual void SimulacaoDeTemperatura_86()
         {
 #line 3
-this.SimulacaoTemperatura("86", "30", "303.15", ((string[])(null)));
+this.SimulacaoDeTemperatura("86", "30", "303.15", ((string[])(null)));
 #line hidden
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("SimulacaoTemperatura, 47", SourceLine=10)]
-        public virtual void SimulacaoTemperatura_47()
+        [TechTalk.SpecRun.ScenarioAttribute("Simulacao de Temperatura, 47", SourceLine=10)]
+        public virtual void SimulacaoDeTemperatura_47()
         {
 #line 3
-this.SimulacaoTemperatura("47", "8.33", "281.48", ((string[])(null)));
+this.SimulacaoDeTemperatura("47", "8.33", "281.48", ((string[])(null)));
 #line hidden
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("SimulacaoTemperatura, 90.5", SourceLine=10)]
-        public virtual void SimulacaoTemperatura_90_5()
+        [TechTalk.SpecRun.ScenarioAttribute("Simulacao de Temperatura, 90.5", SourceLine=10)]
+        public virtual void SimulacaoDeTemperatura_90_5()
         {
 #line 3
-this.SimulacaoTemperatura("90.5", "32.5", "305.65", ((string[])(null)));
+this.SimulacaoDeTemperatura("90.5", "32.5", "305.65", ((string[])(null)));
 #line hidden
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("SimulacaoTemperatura, 120.18", SourceLine=10)]
-        public virtual void SimulacaoTemperatura_120_18()
+        [TechTalk.SpecRun.ScenarioAttribute("Simulacao de Temperatura, 120.18", SourceLine=10)]
+        public virtual void SimulacaoDeTemperatura_120_18()
         {
 #line 3
-this.SimulacaoTemperatura("120.18", "48.99", "322.14", ((string[])(null)));
+this.SimulacaoDeTemperatura("120.18", "48.99", "322.14", ((string[])(null)));
 #line hidden
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("SimulacaoTemperatura, 212", SourceLine=10)]
-        public virtual void SimulacaoTemperatura_212()
+        [TechTalk.SpecRun.ScenarioAttribute("Simulacao de Temperatura, 212", SourceLine=10)]
+        public virtual void SimulacaoDeTemperatura_212()
         {
 #line 3
-this.SimulacaoTemperatura("212", "100", "373.15", ((string[])(null)));
+this.SimulacaoDeTemperatura("212", "100", "373.15", ((string[])(null)));
 #line hidden
         }
     }

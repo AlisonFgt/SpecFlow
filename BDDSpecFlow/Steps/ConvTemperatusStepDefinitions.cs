@@ -17,7 +17,7 @@ namespace BDDSpecFlow.Steps
             _temperaturaFahrenheit = valorFahrenheit;
         }
 
-        [When("eu solicitar a conversão desta teperatura")]
+        [When("eu solicitar a conversão desta temperatura")]
         public void ProcessarConversao()
         {
             var objTemperatura = new Temperatura(_temperaturaFahrenheit);
